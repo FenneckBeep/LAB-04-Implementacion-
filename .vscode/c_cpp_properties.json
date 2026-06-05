@@ -1,0 +1,21 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/Clases",
+        "${workspaceFolder}/Datatypes",
+        "${workspaceFolder}/Interfaces",
+        "${workspaceFolder}/ICollection",
+        "${workspaceFolder}/ICollection/collections",
+        "${workspaceFolder}/ICollection/interfaces"
+      ],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cppStandard": "c++11",
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ]
+}

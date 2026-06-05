@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar lab4",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/lab4",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "preLaunchTask": "Compilar con make"
+    }
+  ]
+}
