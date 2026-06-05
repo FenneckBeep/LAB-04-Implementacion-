@@ -25,23 +25,23 @@ public:
                  std::string direccion, std::string telefono, std::string url);
     virtual ~Inmobiliaria();
 
-    std::string getDireccion() const;
-    std::string getTelefono() const;
-    std::string getUrl() const;
-    ICollection *getPropietarios() const;
-    ICollection *getAdministraciones() const;
+    std::string getDireccion();
+    std::string getTelefono();
+    std::string getUrl();
+    ICollection *getPropietarios();
+    ICollection *getAdministraciones();
 
-    DTInmobiliaria obtenerDT() const;
-    ICollection *listarInmuebles() const;
-    ICollection *listarInmueblesAdministrados() const;
-    bool representa(Propietario *propietario) const;
-    Administra *obtenerAdministracionDe(Inmueble *inmueble) const;
+    DTInmobiliaria obtenerDT();
+    ICollection *listarInmuebles();
+    ICollection *listarInmueblesAdministrados();
+    bool representa(Propietario *propietario);
+    Administra *obtenerAdministracionDe(Inmueble *inmueble);
     void vincularPropietario(Propietario *propietario);
     void desvincularPropietario(Propietario *propietario);
     Administra *administrarInmueble(Inmueble *inmueble, DTFecha fechaActual);
     void vincularAdministracion(Administra *administra);
     void desvincularAdministracion(Administra *administra);
-    TipoUsuario obtenerTipoUser() const override;
+    TipoUsuario obtenerTipoUser() override;
 };
 
 #endif

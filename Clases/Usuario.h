@@ -17,12 +17,12 @@ public:
     Usuario(std::string nickname, std::string contrasenia, std::string nombre, std::string email);
     virtual ~Usuario();
 
-    std::string getNickname() const;
-    std::string getContrasenia() const;
-    std::string getNombre() const;
-    std::string getEmail() const;
+    std::string getNickname();
+    std::string getContrasenia();
+    std::string getNombre();
+    std::string getEmail();
 
-    virtual TipoUsuario obtenerTipoUser() const = 0;
+    virtual TipoUsuario obtenerTipoUser() = 0;
 };
 
 #endif

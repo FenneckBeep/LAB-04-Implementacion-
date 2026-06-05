@@ -20,16 +20,16 @@ public:
                 std::string email, std::string cuentaBancaria, std::string telefono);
     virtual ~Propietario();
 
-    std::string getCuentaBancaria() const;
-    std::string getTelefono() const;
-    ICollection *getInmuebles() const;
-    ICollection *getInmobiliarias() const;
+    std::string getCuentaBancaria();
+    std::string getTelefono();
+    ICollection *getInmuebles();
+    ICollection *getInmobiliarias();
 
     void vincularInmueble(Inmueble *inmueble);
     void desvincularInmueble(Inmueble *inmueble);
     void vincularInmobiliaria(Inmobiliaria *inmobiliaria);
     void desvincularInmobiliaria(Inmobiliaria *inmobiliaria);
-    TipoUsuario obtenerTipoUser() const override;
+    TipoUsuario obtenerTipoUser() override;
 };
 
 #endif

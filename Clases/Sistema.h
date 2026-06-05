@@ -21,6 +21,17 @@ private:
     IDictionary *publicaciones;
     Inmobiliaria *inmobiliariaRecordada;
     Inmueble *inmuebleRecordado;
+    Propietario *propietarioRecordado;
+    std::string nicknameRecordado;
+    std::string contraseniaRecordada;
+    std::string nombreRecordado;
+    std::string emailRecordado;
+    std::string direccionInmuebleRecordada;
+    std::string numPuertaInmuebleRecordada;
+    int superficieInmuebleRecordada;
+    int anioConstruccionRecordado;
+    bool hayUsuarioRecordado;
+    bool hayInmuebleRecordado;
     int proximoIdInmueble;
     int proximoIdPublicacion;
 
@@ -36,6 +47,13 @@ public:
     virtual ~Sistema();
 
     bool existeUsuario(std::string nickname) const override;
+    Status existeUsuario(std::string nickname, std::string contrasenia,
+                         std::string nombre, std::string email) override;
+    Status altaUsuario_Cliente(std::string apellido, std::string documento) override;
+    Status altaUsuario_Propietario(std::string cuentaBancaria,
+                                   std::string telefono) override;
+    Status altaUsuario_Inmobiliaria(std::string direccion, std::string telefono,
+                                    std::string url) override;
     Status altaCliente(std::string nickname, std::string contrasenia, std::string nombre,
                        std::string email, std::string apellido, std::string documento) override;
     Status altaPropietario(std::string nickname, std::string contrasenia, std::string nombre,
@@ -51,6 +69,15 @@ public:
     int agregarApartamento(std::string nicknamePropietario, std::string direccion,
                            std::string numPuerta, int superficie, int anioConstruccion,
                            int numPiso, bool tieneAscensor, double gastosComunes) override;
+
+    ICollection *listarPropietarios() override;
+    Status agregarPropietario(std::string nickname) override;
+    Status agregarInmueble(std::string direccion, std::string numPuerta,
+                           int superficie, int anioConstruccion) override;
+    int agregarCasa(bool esHorizontal, TipoTecho techo) override;
+    int agregarApartamento(int numPiso, bool tieneAscensor, double gastosComunes) override;
+    Status representarPropietario(std::string nicknameInmobiliaria,
+                                  std::string nicknamePropietario) override;
 
     ICollection *listarInmobiliarias() override;
     ICollection *listarInmuebles(std::string nickname) override;

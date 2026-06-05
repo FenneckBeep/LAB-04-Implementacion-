@@ -18,13 +18,13 @@ public:
             std::string apellido, std::string documento);
     virtual ~Cliente();
 
-    std::string getApellido() const;
-    std::string getDocumento() const;
-    ICollection *getAgendas() const;
+    std::string getApellido();
+    std::string getDocumento();
+    ICollection *getAgendas();
 
     void vincularAgenda(Agenda *agenda);
     void desvincularAgenda(Agenda *agenda);
-    TipoUsuario obtenerTipoUser() const override;
+    TipoUsuario obtenerTipoUser() override;
 };
 
 #endif
